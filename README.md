@@ -2,7 +2,7 @@
 # What is it?
 * A minimalistic app that shows the current temparatures in predefinde areas.
 * A Resilent infrastructur for IoT Devices
-## Requierments
+## Requirements
 * 3 Node Kuberbetes Cluster
 * Helm
 ## Install Helm
@@ -34,7 +34,7 @@ kubectl create -f issuer.yml
 kubectl create -f cert-obj.yml
 ```
 # Run the weather APP
-insert your openweathermap api key
+Insert your openweathermap api key into the markt places in "src/index.php".
 ## Build the Docker container
 ```
 docker build .
