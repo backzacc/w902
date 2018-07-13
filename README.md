@@ -9,7 +9,7 @@ The Small APP is suposed to be minimalistic
 * 3 Node Kuberbetes Cluster
 * Helm
 # Install Helm
-* Get the Binary Build for helm
+* Install the Binary Build
 [https://github.com/kubernetes/helm/releases](https://github.com/kubernetes/helm/releases)
 ## Create a Tiller service-account
 ```
