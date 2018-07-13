@@ -1,17 +1,17 @@
 <?php
-$resultzh = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Zurich,ch&appid=b0c4334e055feb697bcb232c0e6b8174&units=metric&lang=de');
+$resultzh = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Zurich,ch&appid=<<api key>>&units=metric&lang=de');
 
 $zh = json_decode($resultzh,1);
 $tempzh = $zh['main']['temp'];
 $descriptionzh = $zh['weather']['0']['description'];
 $namezh = $zh['name'];
-$resultzg = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Zug,ch&appid=b0c4334e055feb697bcb232c0e6b8174&units=metric&lang=de');
+$resultzg = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Zug,ch&appid=<<api key>>&units=metric&lang=de');
 $zg = json_decode($resultzg,1);
 $tempzg = $zg['main']['temp'];
 $descriptionzg = $zg['weather']['0']['description'];
 $namezg = $zg['name'];
 
-$resultbs = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Basel,ch&appid=b0c4334e055feb697bcb232c0e6b8174&units=metric&lang=de');
+$resultbs = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Basel,ch&appid=<<api key>>&units=metric&lang=de');
 $bs = json_decode($resultbs,1);
 $tempbs = $bs['main']['temp'];
 $descriptionbs = $bs['weather']['0']['description'];
