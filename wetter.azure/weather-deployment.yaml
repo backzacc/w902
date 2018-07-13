@@ -15,9 +15,10 @@ spec:
       labels:
         app: weather
     spec:
+      replicas: 3
       containers:
       - name: weather-azure
-        image: php:7.0-apache
+        image: backzacc/w902:latest
         ports:
         - containerPort: 80
 ---

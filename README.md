@@ -19,16 +19,16 @@ helm init --service-account tiller --canary-image
 ## Configure Ingress
 ```
 helm install stable/nginx-ingress --namespace kube-system
-
 kubectl get service -l app=nginx-ingress --namespace kube-system
-
 ```
 # Configure Cert-Manager
 ```
 helm install stable/cert-manager --set ingressShim.defaultIssuerName=letsencrypt-prod --set ingressShim.defaultIssuerKind=ClusterIssuer
 ```
 ## Create an Cert Issuer
+```
 kubectl create -f issuer.yml
+```
 ## Creat a Cert Object
 ```
 kubectl create -f cert-obj.yml
@@ -36,7 +36,9 @@ kubectl create -f cert-obj.yml
 # Run the weather APP
 insert your openweathermap api key
 ## Build the Docker container
+```
 docker build .
+```
 ## Tag the container
 ```
 docker tag <<container id>> <<user id>>/<<repository name>>:<<version>>
@@ -55,9 +57,9 @@ kubectl create -f ingress-resource.yaml
 ## Create the ingress Resource
 ### Edit the hostname within the ingress resource
 ```
-
 kubectl create -f ingress-resource.yaml
 ```
 ## visit the site to make sure it works
+https://yoursite.com
 ## Testing
 * Delete a random Pod
