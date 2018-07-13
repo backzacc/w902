@@ -49,7 +49,15 @@ docker push
 ```
 ## edit the image in the weather-deployment file
 ## Create the Deployment
+```
+kubectl create -f ingress-resource.yaml
+```
 ## Create the ingress Resource
+### Edit the hostname within the ingress resource
+```
+
+kubectl create -f ingress-resource.yaml
+```
 ## visit the site to make sure it works
 ## Testing
 * Delete a random Pod
