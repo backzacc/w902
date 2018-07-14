@@ -65,3 +65,17 @@ kubectl create -f ingress-resource.yaml
 ```
 ## visit the site to make sure it works
 https://yoursite.com
+## Security
+Securtity is an important issue for cloud infrastructur.
+Heres a link to some basic thing someone could do to secure his cluser.
+[https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
+# Summary
+Learning how to configure a Kubernetes cluster was more demanding then we thought. The Weather app is statless, but it would have been better to make a statefull applicationen with a DB as backend. 
+Weather apps in 2018 are in my opinion trash and should be reworked to be more minimalistic and less distractive. 
+# Making the Weather app produktion ready
+We would suggest reworking the frontend and backend compleatly.
+The Webserver and replica should access a DB instead of the api server directly.
+Using ML to predict the weather would be a nice feature.
+# Links
+* [https://docs.microsoft.com/sl-si/azure/aks/ingress](https://docs.microsoft.com/sl-si/azure/aks/ingress) 
+* [https://openweathermap.org/](https://openweathermap.org/)
