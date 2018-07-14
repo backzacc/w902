@@ -1,25 +1,32 @@
 # w902
-# What is it?
+# Overview
+## What is it?
 * A minimalistic app that shows the current temparatures in predefinde areas.
-* The configuration of the Kubernetes infrastructure used for this Project.
-## Why we made it.
-We use Kubernetes, for the infrastructur because it is something new for us. 
-The Small APP is suposed to be minimalistic 
+* The configuration files of the Kubernetes infrastructure used in this Project.
+# Why Kubernetes
+We use Kubernetes, for the infrastructur because it is something new for us.
+# Why not just using Serverless Containers?
+Using Serveless Containers would have been easier and less fun.
 ## Requirements
-* 3 Node Kuberbetes Cluster
-* Helm
+* 3 Node Kuberbetes Cluster (We use Azure as Cloud Providor)
+* Helm (Configured with RBAC)
 # Install Helm
+We have to install helm for the installatione of Ingress and the Cert-Manager
 * Install the Binary Build
 [https://github.com/kubernetes/helm/releases](https://github.com/kubernetes/helm/releases)
 ## Create a Tiller service-account
+The Tiller service account is needed for to grant helm the necessary permissions.
 ```
 kubectl create -f rbac-config.yaml
 ```
 ## Initialize Helm
+The flag --canary-image allows us to use the testing version of helm.
+It isn't recommended for deployment in production.
 ```
 helm init --service-account tiller --canary-image
 ```
 # Configure Ingress
+Ingress is our gatway to the WWW.
 ```
 helm install stable/nginx-ingress --namespace kube-system
 kubectl get service -l app=nginx-ingress --namespace kube-system
